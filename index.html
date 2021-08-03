@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="loader">
+        <span class="lettre">C</span>
+        <span class="lettre">H</span>
+        <span class="lettre">A</span>
+        <span class="lettre">R</span>
+        <span class="lettre">G</span>
+        <span class="lettre">E</span>
+        <span class="lettre">M</span>
+        <span class="lettre">E</span>
+        <span class="lettre">N</span>
+        <span class="lettre">T</span>
+    </div>
+
+    <div class="accueil">
+        <h1>All right, Bienvenue !</h1>
+    </div>
+
+ <script type="text/javascript">
+  const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+
+    loader.classList.add('fondu-out');
+
+});
+
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
+
+function toggleMenu() {
+    const tmenuToggle = document.querySelector('.menuToggle');
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+}
+    </script>
+   
+</body>
+</html>
